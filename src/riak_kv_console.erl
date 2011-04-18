@@ -58,7 +58,7 @@ remove([Node]) ->
 
 remove_node(Node) when is_atom(Node) ->
     try 
-        case riak_core:remove_from_cluster(Node) ->
+        case riak_core:remove_from_cluster(Node) of
             {badrpc, RPCReason} ->
                 case RPCReason of
                     {'EXIT', {badarg, [{erlang, hd, [[]]}|_]}} ->
