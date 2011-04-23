@@ -412,10 +412,10 @@ make_vput_replies([{_CurObj, First, FirstSeq, Second, SecondSeq, _NodeStatus} | 
 make_bucket_props(N, AllowMult, Precommit, Postcommit) ->
     RequestProps =  [{n_val, N},
                      {allow_mult, AllowMult}],
-    ModDef = {<<"mod">>, atom_to_binary(?MODULE, latin1)},
+    ModDef = {<<"module">>, atom_to_binary(?MODULE, latin1)},
     HookXform = fun({erlang, Hook}) ->
                         {struct, [ModDef,
-                                   {<<"fun">>, atom_to_binary(Hook,latin1)}]};
+                                   {<<"function">>, atom_to_binary(Hook,latin1)}]};
                    ({js, Hook}) ->
                         {struct, [{<<"name">>, atom_to_binary(Hook,latin1)}]};
                    ({garbage, garbage}) ->

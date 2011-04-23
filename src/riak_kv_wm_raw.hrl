@@ -36,8 +36,8 @@
 -define(JSON_BUCKETS, <<"buckets">>).
 -define(JSON_KEYS,    <<"keys">>).
 -define(JSON_LINKFUN, <<"linkfun">>).
--define(JSON_MOD,     <<"mod">>).
--define(JSON_FUN,     <<"fun">>).
+-define(JSON_MOD,     <<"module">>).
+-define(JSON_FUN,     <<"function">>).
 -define(JSON_CHASH,   <<"chash_keyfun">>).
 -define(JSON_JSFUN,    <<"jsfun">>).
 -define(JSON_JSANON,   <<"jsanon">>).
